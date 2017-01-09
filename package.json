@@ -1,0 +1,18 @@
+{
+  "name": "repository-name",
+  "version": "1.0.0",
+  "license": "",
+  "repository": "https://github.com/account/repository",
+  "author": "UserName <mail@domain.com>",
+  "scripts": {
+    "start": "concurrently --raw \"npm run client\" \"npm run server\"",
+    "install-modules": "npm install && npm run installClient && npm run installServer",
+    "installClient": "cd client && yarn install && npm install",
+    "installServer": "cd server && npm install",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start"
+  },
+  "dependencies": {
+    "concurrently": "^3.1.0"
+  }
+}
